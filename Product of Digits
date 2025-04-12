@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        int a=in.nextInt();
+        int sum=1;
+        while(a>0){
+            int temp=a%10;
+            sum=sum*temp;
+            a=a/10;
+        }
+        System.out.print("Product of Digits :"+ sum);
+
+        
+    }
+}
+OUTPUT:
+Enter the number: 
+123
+Product of Digits :6

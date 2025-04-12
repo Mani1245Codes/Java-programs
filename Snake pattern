@@ -1,0 +1,54 @@
+import java.util.*;
+public class Mat {   //Snake pattern
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the matrix range1:");
+        int a = in.nextInt();
+        System.out.println("Enter the matrix range2:");
+        int b = in.nextInt();
+        System.out.println("Enter the matrix elements:");
+        int arr[][] = new int[a][b];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                arr[i][j] = in.nextInt();
+            }
+        }
+        System.out.println("The snake pattern output is:");
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 == 0) {
+                for(int j=0;j<arr.length;j++){
+                    System.out.print(arr[i][j]+" ");
+                }
+                System.out.println();
+            }
+            else {
+                for (int j = arr[0].length-1; j >= 0; j--) {
+                    System.out.print(arr[i][j]+" ");
+                }
+                System.out.println();
+            }
+
+        }
+    }
+}
+
+
+Enter the matrix range1:
+3
+Enter the matrix range2:
+3
+Enter the matrix elements:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+The snake pattern output is:
+1 2 3 
+6 5 4 
+7 8 9 
+

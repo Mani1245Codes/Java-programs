@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the two String: ");
+        String s = in.next();
+        String b = in.next();
+        if (s.length() == b.length()) {
+            char[] arr1 = s.toCharArray();
+            char[] arr2 = b.toCharArray();
+            Arrays.sort(arr1);
+            Arrays.sort(arr2);
+            System.out.println("The output is: ");
+            if (Arrays.equals(arr1, arr2)) {
+                System.out.print("Strings are anagrams of each other");
+            } else {
+                System.out.print("Strings are not anagrams of each other");
+            }
+        } else {
+            System.out.print("Strings are not anagrams of each other");
+        }
+    }
+}
+OUTPUT:
+Enter the two String: 
+helloworld
+worldhello
+The output is: 
+Strings are anagrams of each other

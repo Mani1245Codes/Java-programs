@@ -1,0 +1,24 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter the word: ");
+        String s=in.nextLine();
+        int n=s.length();
+        System.out.println("The output is: ");
+        if(n>10){
+            System.out.print(s.charAt(0)+""+(n-2)+s.charAt(n-1));
+        }
+        else{
+            System.out.print(s);
+        }
+
+
+    }
+}
+
+OUTPUT:
+Enter the word: 
+hello world
+The output is: 
+h9d

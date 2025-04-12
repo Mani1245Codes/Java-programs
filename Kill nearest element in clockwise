@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main {    //kill nearest element in clockwise
+	static int jose(int n,int m) {
+		int sum=0;
+		for(int i=m;i<=n;i++) {
+			sum=(sum+m)%i;
+		}
+		return sum+1;
+	}
+	public static void main(String args[]) {
+		Scanner in=new Scanner (System.in);
+		System.out.println("Enter the range value:");
+		int a=in.nextInt();
+		System.out.println("Enter the target value:");
+		int b=in.nextInt(); //First kill element
+		int res=jose(a,b);
+		System.out.println("The person in the given range is:");
+		System.out.print(res);
+	}
+
+}
+
+OUTPUT: 
+Enter the target value:
+3
+The person in the given range is:
+1

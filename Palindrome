@@ -1,0 +1,28 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        int n=in.nextInt();
+        System.out.println("OUTPUT IS: ");
+        
+        int t=n;
+        int sum=0;
+        while(n!=0){
+            int temp=n%10;
+            sum=(sum*10)+temp;
+            n=n/10;
+        }
+        if(t==sum){
+            System.out.print("is palindrome");
+        }
+        else{
+            System.out.print("Not a palindrome");
+        }
+    }
+}
+
+Enter the number: 
+121
+OUTPUT IS: 
+is palindrome

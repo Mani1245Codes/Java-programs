@@ -1,0 +1,46 @@
+import java.util.*;
+public class Uppertri {   //Count the upper matrix elements
+	public static void main(String args[]) {
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter the first matrix Range:");
+		int a=in.nextInt();
+		System.out.println("Enter the second matrix Range:");
+		int b=in.nextInt();
+		int arr[][]=new int[a][b];
+		System.out.println("Enter the elements:");
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr.length;j++) {
+				arr[i][j]=in.nextInt();
+			}
+		}
+		int sum=0;
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr.length;j++) {
+				if(i==j || i<j) {
+					sum=sum+arr[i][j];
+				}
+			}
+		}
+		System.out.println("The upper matrix count is:");
+		System.out.println(sum);
+	}
+
+}
+
+
+Enter the first matrix Range:
+3
+Enter the second matrix Range:
+3
+Enter the elements:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+The upper matrix count is:
+26

@@ -1,0 +1,27 @@
+import java.util.*;
+public class Mat{
+    public static void main(String args[]){
+        Map<Character,Integer> m=new HashMap<Character,Integer>();
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter the word: ");
+        String n=in.nextLine();
+        char[] a =n.toCharArray();
+        for(char s:a){
+            if(!m.containsKey(s)){
+                m.put(s, 1);
+            }
+            else{
+                int f=m.put(s,m.get(s)+1);
+            }
+        }
+        System.out.println("The output is: ");
+        System.out.println(m);
+    }
+}
+
+OUTPUT:
+Enter the word: 
+helloworld
+The output is: 
+{r=1, d=1, e=1, w=1, h=1, l=3, o=2}
+

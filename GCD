@@ -1,0 +1,28 @@
+import java.util.*;
+public class m {
+	static int gcd(int m,int n) {
+		if(m==0) {
+			return n;
+		}
+		return gcd(n%m,m);
+	}
+	public static void main(String args[]) {
+		Scanner in =new Scanner(System.in);
+		System.out.println("Enter the first element:");
+		int a=in.nextInt();
+		System.out.println("Enter the second element:");
+		int b=in.nextInt();
+		int res=gcd(a,b);
+		System.out.println("The co-prime of element is:");
+		System.out.print(res);
+	}
+
+}
+
+OUTPUT:
+Enter the first element:
+3
+Enter the second element:
+12
+The co-prime of element is:
+3

@@ -1,0 +1,27 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter the word: ");
+        String s=in.nextLine();
+        
+        String m=s.toLowerCase();
+        String arr[]=m.split(" ");
+        
+        String out="";
+        for(String res:arr){
+            if(res.length()>0){
+                out+=(Character.toUpperCase(res.charAt(0))+res.substring(1)+" ");
+            }
+        }
+        System.out.println("The output is: ");
+        System.out.print(out);
+        
+    }
+}
+
+OUTPUT:
+Enter the word: 
+hello world
+The output is: 
+Hello World 

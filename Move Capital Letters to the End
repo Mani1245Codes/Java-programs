@@ -1,0 +1,28 @@
+import java.util.*;
+public class Method{
+    public static void main(String args[]){ //Print Caps letters to last
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter the line:");
+        String a=in.nextLine();
+        String m="";
+        String n="";
+        for(int i=0;i<a.length();i++){
+            if(a.charAt(i)>='A' && a.charAt(i)<='Z'){
+                m=m+a.charAt(i);
+            }
+            else{
+                n=n+a.charAt(i);
+            }
+        }
+        System.out.println("The output is:");
+        System.out.print(n+m);
+
+    }
+}
+
+
+OUTPUT:
+Enter the line:
+Hello World Java
+The output is:
+ello orld avaHWJ

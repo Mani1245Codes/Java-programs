@@ -1,0 +1,21 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter the range: ");
+        int a=in.nextInt();
+        int arr[]=new int[a+1];
+        arr[0]=1;
+        arr[1]=1;
+        for(int i=2;i<=a;i++){
+            arr[i]=arr[i-1]+arr[i-2];
+        }
+        System.out.println("The output is: "+arr[a]);
+    }
+}
+
+OUTPUT:
+
+Enter the range: 
+5
+The output is: 8

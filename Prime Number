@@ -1,0 +1,38 @@
+import java.util.*;
+class Main {
+    
+    public static boolean isprime(int a){
+        
+        if(a<=1){
+            return false;
+        }
+        for(int i=2;i<=Math.sqrt(a);i++){
+            if(a%i==0){
+                return false;
+            }
+        }
+        return true;
+        
+    }
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        int a=in.nextInt();
+        System.out.println("OUTPUT IS: ");
+        
+        if(isprime(a)){
+            System.out.print("is prime");
+        }
+        else{
+            System.out.print("Not a prime");
+        }
+        
+       
+    }
+}
+
+OUTPUT:
+Enter the number: 
+5
+OUTPUT IS: 
+is prime

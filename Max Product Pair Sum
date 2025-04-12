@@ -1,0 +1,43 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter the limit: ");
+        int a=in.nextInt();
+        System.out.println("Enter the elements: ");
+        int arr[]=new int[a];
+        for(int i=0;i<arr.length;i++){
+            arr[i]=in.nextInt();
+        }
+        
+        Arrays.sort(arr);
+        
+        String s="";
+        int max=arr[0]*arr[1];
+        int sum=arr[0]+arr[1];
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(max<arr[i]*arr[j]){
+                    max=arr[i]*arr[j];
+                    sum=arr[i]+arr[j];
+                }
+                
+            }
+            
+        }
+        System.out.println("Max Product Pair Sum is: "+sum);
+    
+        
+    }
+}
+
+OUTPUT: 
+Enter the limit: 
+5
+Enter the elements: 
+1
+2
+3
+4
+5
+Max Product Pair Sum is: 9
